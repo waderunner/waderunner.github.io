@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        var jq = jQuery.noConflict()
+    </script>
+    <style>
+        .primo-button {
+
+            text-transform: none;
+            overflow: hidden;
+            color: #fff;
+            cursor: default;
+            border-radius: 16px;
+            display: block;
+            height: 28px;
+            line-height: 28px;
+            margin: auto 3px;
+            margin-right: 6px;
+            float: left;
+            box-sizing: border-box;
+            max-width: 100%;
+            position: relative;
+            min-width: 1%;
+            min-height: 1%;
+            background-color:#5b3e91;
+        }
+    </style>
+</head>
+<div id="primosearch">
+    <img alt="UW Libraries Search logo" title="UW Libraries Search logo"
+        src="https://lib.uw.edu/homepage-contents/images/ve-logo" class="image-left" />
+    <form action="https://orbiscascade-washington-psb.primo.exlibrisgroup.com/discovery/search"
+        enctype="application/x-www-form-urlencoded; charset=utf-8" id="searchFormPrimoNUI" method="get"
+        name="searchSimpleForm" target="_self">
+        <input name="vid" type="hidden" value="01ALLIANCE_UW:UW_Dev" /><input name="tab" type="hidden"
+            value="UW_default" /><input name="search_scope" type="hidden" value="UW_EVERYTHING" /><input name="lang"
+            type="hidden" value="en" /><input id="primoQuery" name="query" type="hidden" /><label class="sr-only"
+            for="queryTemp">Articles, books + more:</label>
+        <input class="search-query" id="primoQueryTemp" name="queryTemp" type="text"
+            placeholder="Articles, Books + More - UW Libraries Search" /><input alt="Search" id="go" title="Search"
+            type="submit" value="Search" /><br /><br />
+
+        <div class="btn-group">
+            <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,pbooks"
+                onclick="searchPrimoPfilter()">Books</button>
+            <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,ebooks"
+                onclick="searchPrimoPfilter()"><svg width="100%" height="100%" viewBox="0 0 60 60" fill="none" id="books_cache34" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+                    <rect width="60" height="60" transform="matrix(0 -1 1 0 0 60)" fill="white" fill-opacity="0"></rect>
+                    <path d="M13 9.00002H46.5C47.6046 9.00002 48.5 9.89545 48.5 11V48.6667C48.5 49.7713 47.6046 50.6667 46.5 50.6667H13C11.8954 50.6667 11 49.7713 11 48.6667L11 11C11 9.89545 11.8954 9.00002 13 9.00002Z" stroke="black" stroke-width="2.5"></path>
+                    <path d="M11 42.3334H48.5" stroke="black" stroke-width="2.5"></path>
+                    <path d="M29.75 46.5232L29.7708 46.5001" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M29.75 9.00006V23.5834L34.8906 20.1563C35.5624 19.7085 36.4376 19.7085 37.1094 20.1563L42.25 23.5834V9.00006" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M17.25 29.8334L38.0833 29.8334" stroke="black" stroke-width="2.5" stroke-linecap="round"></path>
+                    <path d="M17.25 23.5834H23.5" stroke="black" stroke-width="2.5" stroke-linecap="round"></path>
+                </svg>eBooks</button>
+            <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,articles"
+                onclick="searchPrimoPfilter()">Articles</button>
+            <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,journals"
+                onclick="searchPrimoPfilter()">Journals</button>
+            <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,images"
+                onclick="searchPrimoPfilter()">Images</button>
+            <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,videos"
+                onclick="searchPrimoPfilter()">Videos</button>
+        </div>
+
+
+
+        <div class="homesrchadvan">
+            <p>
+                <a class="external-link" href="http://search.lib.uw.edu/advanced">Advanced Search</a>
+            </p>
+            <p>
+                <a class="external-link" href="http://guides.lib.uw.edu/research/uwlibrariessearch">FAQ</a>
+                |&nbsp;<a class="internal-link"
+                    href="https://www.lib.washington.edu/help/connect/known-issues#uwlibsearch">Known Issues</a>
+                |
+                <a href="https://lib.uw.edu/about/contact/email" class="internal-link"><i>Questions/Comments on UW
+                        Libraries Search</i></a>
+            </p>
+        </div>
+
+    </form>
+</div>
+<script>
+    function searchSimplePrimo() {
+        var form = document.forms["searchFormPrimoNUI"];
+        /* in case the event was triggered on an internal input */
+        while (form.nodeName !== "FORM") form = form.parentElement;
+
+        /* grab the value from queryTemp, and modify it to put in query */
+        var temp_query_input = form.querySelector('input[name="queryTemp"]');
+        var real_query_input = form.querySelector('input[name="query"]');
+        real_query_input.value =
+            "any,contains," + temp_query_input.value.replace(/[,]/g, " ");
+        form.submit();
+    }
+
+    function searchPrimoPfilter() {
+        var form = document.forms["searchFormPrimoNUI"];
+        /* in case the event was triggered on an internal input */
+        while (form.nodeName !== "FORM") form = form.parentElement;
+
+        /* grab the value from queryTemp, and modify it to put in query */
+        var temp_query_input = form.querySelector('input[name="queryTemp"]');
+        var real_query_input = form.querySelector('input[name="query"]');
+        real_query_input.value =
+            "any,contains," + temp_query_input.value.replace(/[,]/g, " ") + "&pfilter=" + document.getElementById("pfilter");
+        form.submit();
+    }
+
+    jq(function () {
+        jq("#searchFormPrimoNUI").submit(function () {
+            searchSimplePrimo();
+        });
+        // onsubmit
+    });
+
+</script>
+
+</html>
