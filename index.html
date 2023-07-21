@@ -11,9 +11,9 @@
 
             text-transform: none;
             overflow: hidden;
-            color: #fff;
+            color: #000;
             cursor: default;
-            border-radius: 16px;
+            border-radius: 3px;
             display: block;
             height: 28px;
             line-height: 28px;
@@ -25,7 +25,7 @@
             position: relative;
             min-width: 1%;
             min-height: 1%;
-            background-color:#5b3e91;
+            background-color:#efefef;
         }
     </style>
 </head>
@@ -47,15 +47,18 @@
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,pbooks"
                 onclick="searchPrimoPfilter()">Books</button>
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,ebooks"
-                onclick="searchPrimoPfilter()"><svg width="100%" height="100%" viewBox="0 0 60 60" fill="none" id="books_cache34" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
-                    <rect width="60" height="60" transform="matrix(0 -1 1 0 0 60)" fill="white" fill-opacity="0"></rect>
+                onclick="searchPrimoPfilter()">
+                <svg width="100%" height="100%" viewBox="0 0 60 60" fill="none" id="books_cache34" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+                    <rect width="60" height="60" transform="matrix(0 -1 1 0 0 60)" fill="black" fill-opacity="0"></rect>
                     <path d="M13 9.00002H46.5C47.6046 9.00002 48.5 9.89545 48.5 11V48.6667C48.5 49.7713 47.6046 50.6667 46.5 50.6667H13C11.8954 50.6667 11 49.7713 11 48.6667L11 11C11 9.89545 11.8954 9.00002 13 9.00002Z" stroke="white" stroke-width="2.5"></path>
-                    <path d="M11 42.3334H48.5" stroke="white" stroke-width="2.5"></path>
-                    <path d="M29.75 46.5232L29.7708 46.5001" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M11 42.3334H48.5" stroke="black" stroke-width="2.5"></path>
+                    <path d="M29.75 46.5232L29.7708 46.5001" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M29.75 9.00006V23.5834L34.8906 20.1563C35.5624 19.7085 36.4376 19.7085 37.1094 20.1563L42.25 23.5834V9.00006" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M17.25 29.8334L38.0833 29.8334" stroke="white" stroke-width="2.5" stroke-linecap="round"></path>
-                    <path d="M17.25 23.5834H23.5" stroke="white" stroke-width="2.5" stroke-linecap="round"></path>
-                </svg>eBooks</button>
+                    <path d="M17.25 29.8334L38.0833 29.8334" stroke="black" stroke-width="2.5" stroke-linecap="round"></path>
+                    <path d="M17.25 23.5834H23.5" stroke="black" stroke-width="2.5" stroke-linecap="round"></path>
+                </svg>
+            eBooks
+            </button>
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,articles"
                 onclick="searchPrimoPfilter()">Articles</button>
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,journals"
