@@ -44,7 +44,8 @@
             value="UW_default" /><input name="search_scope" type="hidden" value="UW_EVERYTHING" /><input name="lang"
             type="hidden" value="en" /><input id="primoQuery" name="query" type="hidden" />
         <input class="search-query" id="primoQueryTemp" name="queryTemp" type="text"
-            placeholder="Articles, Books + More - UW Libraries Search" required title="Please add search term(s)." />&nbsp;<input alt="Search" id="go" title="Search"
+            placeholder="Articles, Books + More - UW Libraries Search" required="required" oninvalid="this.setCustomValidity('Please enter your search term(s) here')"
+            oninput="this.setCustomValidity('')" />&nbsp;<input alt="Search" id="go" title="Search"
             type="submit" value="Search" /><br /><br />
 
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,pbooks"
