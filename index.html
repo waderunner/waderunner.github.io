@@ -10,18 +10,20 @@
         body {
             background-color: #5b3e91;
         }
-/*         .primo-button {
+         .primo-button {
 
             text-transform: none;
             overflow: hidden;
             color: #000;
             cursor: default;
-            border-radius: 3px;
+            border: none;
+            color: black;
+            border-radius: 16px;
             display: block;
             height: 28px;
             line-height: 28px;
             margin: auto 3px;
-            margin-right: 6px;
+            margin-right: 3px;
             float: left;
             box-sizing: border-box;
             max-width: 100%;
@@ -29,18 +31,27 @@
             min-width: 1%;
             min-height: 1%;
             background-color: #efefef;
-        } */
+            display: inline-flex;
+  align-items: center;
+        }
 
-        .primo-button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
+        .primo-button:hover {
+            background-color: #D7A900;
+        }
+
+        .primo-button:focus {
+            background-color: #D7A900;
+        }
+
+        .search-label {
+            color: white;
+            font-weight:bold;
+            font-size:1.5em;
+            font-family: 'Open Sans',verdana,sans-serif;
+        }
+
+        
+
 
     </style>
 </head>
@@ -55,9 +66,12 @@
             type="hidden" value="en" /><input id="primoQuery" name="query" type="hidden" />
         <input class="search-query" id="primoQueryTemp" name="queryTemp" type="text"
             placeholder="Articles, Books + More - UW Libraries Search" required="required" oninvalid="this.setCustomValidity('Please enter your search term(s) here')"
-            oninput="this.setCustomValidity('')" /><br /><br />Search:<br /><br />
-            <button class="primo-button" alt="Search" id="go" title="Search" type="submit" value="Search"></button>
-            <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,pbooks"
+            oninput="this.setCustomValidity('')" />
+            <input alt="Search" id="go" title="Search" type="submit" value="Search">
+            <br /><br /><span class="search-label">Search:</span><br /><br />
+
+            <!-- <button class="primo-button" alt="Search" id="go" title="Search" type="submit" value="Search"><img src="everything.svg" style="height: 20px;"/>Everything</button> -->
+<!--             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,pbooks"
                 onclick="searchPrimoPfilter()"><img src="books.svg" style="height: 20px;"/> Books</button>
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,ebooks"
                 onclick="searchPrimoPfilter()">
@@ -69,7 +83,7 @@
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,images"
                 onclick="searchPrimoPfilter()"><img src="images.svg" style="height: 20px;"/> Images</button>
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,videos"
-                onclick="searchPrimoPfilter()"><img src="videos.svg" style="height: 20px;"/> Streaming Videos</button>
+                onclick="searchPrimoPfilter()"><img src="videos.svg" style="height: 20px;"/> Streaming Videos</button> -->
 
     </form>
 </div>
