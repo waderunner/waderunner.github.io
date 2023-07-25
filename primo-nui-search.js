@@ -21,16 +21,5 @@ jq(function() {
 
 
 
-/* if (document.getElementById("pfilter")) {
-    real_query_input.value =
-    "any,contains," + temp_query_input.value.replace(/[,]/g, " ") + "&pfilter=" + document.getElementById("pfilter");
-}
-else
-   {
-    real_query_input.value =
-    "any,contains," + temp_query_input.value.replace(/[,]/g, " ");
-   }
-}
-form.submit(); */
 
 
