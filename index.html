@@ -10,7 +10,7 @@
         body {
             background-color: #5b3e91;
         }
-        .primo-button {
+/*         .primo-button {
 
             text-transform: none;
             overflow: hidden;
@@ -29,8 +29,18 @@
             min-width: 1%;
             min-height: 1%;
             background-color: #efefef;
-        }
+        } */
 
+        .primo-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
     </style>
 </head>
@@ -45,9 +55,8 @@
             type="hidden" value="en" /><input id="primoQuery" name="query" type="hidden" />
         <input class="search-query" id="primoQueryTemp" name="queryTemp" type="text"
             placeholder="Articles, Books + More - UW Libraries Search" required="required" oninvalid="this.setCustomValidity('Please enter your search term(s) here')"
-            oninput="this.setCustomValidity('')" />&nbsp;<input alt="Search" id="go" title="Search"
-            type="submit" value="Search" /><br /><br />
-
+            oninput="this.setCustomValidity('')" /><br /><br />Search:<br /><br />
+            <button class="primo-button" alt="Search" id="go" title="Search" type="submit" value="Search"></button>
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,pbooks"
                 onclick="searchPrimoPfilter()"><img src="books.svg" style="height: 20px;"/> Books</button>
             <button class="primo-button" type="submit" id="pfilter" name="pfilter" value="rtype,exact,ebooks"
