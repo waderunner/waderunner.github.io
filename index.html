@@ -32,7 +32,7 @@
             min-width: 1%;
             min-height: 1%;
             font-size:16px;
-            font-weight:500;
+            font-weight:500; 
 
 
             display: inline-flex;
@@ -65,7 +65,8 @@
         <input name="tab" type="hidden" value="UW_default">
         <input name="search_scope" type="hidden" value="UW_EVERYTHING"><input name="lang" type="hidden" value="en">
         <input id="primoQuery" name="query" type="hidden">
-        <input class="search-query" id="primoQueryTemp" name="queryTemp" type="text" placeholder="Articles, Books + More - UW Libraries Search" style="width:20%;">
+        <input class="search-query" id="primoQueryTemp" name="queryTemp" type="text" placeholder="Articles, Books + More - UW Libraries Search" style="width:20%;" required oninvalid="this.setCustomValidity('You forgot your search term(s)!')"
+        oninput="this.setCustomValidity('')">
         <!--<input alt="Search" id="go"
             title="Search" type="submit" value="Search"><br>-->
 
