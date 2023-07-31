@@ -69,15 +69,13 @@
         <input id="primoQuery" name="query" type="hidden">
         <input class="search-query" id="primoQueryTemp" name="queryTemp" type="text" placeholder="Articles, Books + More - UW Libraries Search" style="width:20%;" required oninvalid="this.setCustomValidity('You forgot your search term(s)!')"
         oninput="this.setCustomValidity('')">
-        <!--<input alt="Search" id="go"
-            title="Search" type="submit" value="Search"><br>-->
-
+    
         <br /><br />
 
-        <button class="primo-button" alt="Search" id="go" title="Search" type="submit" value="Search" style="background-color: white;color:black;"><img
-                src="everything.png" style="height:100%;"  title="Search Everything" />All</button>
-        <button class="primo-button" type="submit"  name="pfilter" value="rtype,exact,pbooks"
-            ><img src="icon_pbooks.png" style="height: 100%;"  title="Search Print Books" /> Books</button>
+        <button class="primo-button" alt="Search" id="go" title="Search" type="submit" value="Search" style="background-color: white;color:black;"  title="Search Everything"><img
+                src="everything.png" style="height:100%;"  />All</button>
+        <button class="primo-button" type="submit"  name="pfilter" value="rtype,exact,pbooks"  title="Search Print Books"
+            ><img src="icon_pbooks.png" style="height: 100%;"  /> Books</button>
         <button class="primo-button" type="submit"  name="pfilter" value="rtype,exact,books"
             >
             <img src="icon_ebook.png" style="height: 100%;" /> eBooks</button>
