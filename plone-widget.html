@@ -1,0 +1,73 @@
+<div id="search-main">
+    <h2 class="default-content-tab">UW Libraries Search</h2>
+    <div id="primosearch"><img class="image-left" src="resolveuid/e9135be6897747168eccc28a43559ce0" />
+        <script
+            src="https://www.lib.washington.edu/portal_javascripts/Old%20Plone%203%20Custom%20Theme/primo-nui-search.js"
+            type="text/javascript"></script>
+        <form action="https://orbiscascade-washington.primo.exlibrisgroup.com/discovery/search"
+            enctype="application/x-www-form-urlencoded; charset=utf-8" id="searchFormPrimoNUI" method="get"
+            name="searchSimpleForm" target="_self"> <input name="vid" type="hidden" value="01ALLIANCE_UW:mayrelease" />
+            <input name="tab" type="hidden" value="UW_default" /> <input name="search_scope" type="hidden"
+                value="UW_EVERYTHING" /><input name="lang" type="hidden" value="en" /> <input id="primoQuery"
+                name="query" type="hidden" /> <input class="search-query" id="primoQueryTemp" name="queryTemp"
+                style="width: 20%;" type="text" /> <br /><br />
+            <div layout="row" style="display: flex; flex-direction: row; min-height: min-content; flex-shrink: 0;">
+                <button class="primo-button" id="go"
+                    title="Search Everything" type="submit" value="Search"><img
+                        src="https://www.lib.washington.edu/images2/graphics/primo/everything.png"
+                        style="height: 100%;" />All</button> 
+                <button class="primo-button" name="pfilter"
+                    title="Search Print Books" type="submit" value="rtype,exact,pbooks"><img
+                        src="https://www.lib.washington.edu/images2/graphics/primo/icon_pbooks.png"
+                        style="height: 100%;" /> Books</button> 
+                        
+                <button class="primo-button" name="pfilter"
+                    title="Search eBooks" type="submit" value="rtype,exact,books"> <img
+                        src="https://www.lib.washington.edu/images2/graphics/primo/icon_ebook.png"
+                        style="height: 100%;" /> eBooks</button> 
+                        
+                <button class="primo-button" name="pfilter"
+                    title="Search Articles" type="submit" value="rtype,exact,articles"><img
+                        src="https://www.lib.washington.edu/images2/graphics/primo/icon_article.png"
+                        style="height: 100%;" /> Articles</button> 
+                        
+                <button class="primo-button" name="pfilter"
+                    title="Search Journals" type="submit" value="rtype,exact,journals"><img
+                        src="https://www.lib.washington.edu/images2/graphics/primo/icon_journal.png"
+                        style="height: 100%;" /> Journals</button> 
+                        
+                <button class="primo-button" name="pfilter"
+                    title="Search Images" type="submit" value="rtype,exact,images"><img
+                        src="https://www.lib.washington.edu/images2/graphics/primo/icon_image.png"
+                        style="height: 100%;" /> Images</button> 
+                        
+                <button class="primo-button" name="pfilter"
+                    title="Search Videos" type="submit" value="rtype,exact,videos"><img
+                        src="https://www.lib.washington.edu/images2/graphics/primo/icon_video.png"
+                        style="height: 100%;" /> Streaming Videos</button>
+            </div>
+            <br /><br />
+            <div class="homesrchadvan">
+                <p><a class="external-link" href="http://search.lib.uw.edu/advanced">Advanced Search</a></p>
+                <p><a class="external-link" href="http://guides.lib.uw.edu/research/uwlibrariessearch">FAQ</a> | <a
+                        class="internal-link"
+                        href="https://www.lib.washington.edu/help/connect/known-issues#uwlibsearch">Known Issues</a> |
+                    <a class="internal-link" href="https://lib.uw.edu/about/contact/email"><i>Questions/Comments on UW
+                            Libraries Search</i></a></p>
+            </div>
+        </form>
+    </div>
+    <h2 class="content-tab">Site Search</h2>
+    <div id="sitesearch">
+        <form action="https://www.lib.washington.edu/search/" class="search-form" id="searchFormSite" method="get"
+            name="searchFormSite"> <input name="cx" type="hidden" value="008936132526005358774:sx8jrb0rpjo" /> <input
+                name="cof" type="hidden" value="FORID:9" /> <label class="sr-only" for="q">Search this Site for:</label>
+            <input class="search-query" id="sitesearchq" name="q" type="text" /> <input id="submitSearchSite"
+                type="submit" value="Search" />
+            <div class="homesrchadvan"></div>
+        </form>
+    </div>
+    <script
+        src="https://www.lib.washington.edu/portal_javascripts/Old%20Plone%203%20Custom%20Theme/homepage-search-placeholders.js"
+        type="text/javascript"></script>
+</div>
