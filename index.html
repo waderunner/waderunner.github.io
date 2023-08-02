@@ -36,6 +36,7 @@
             font-weight:500; 
             align-items: center;
             text-size-adjust: 100%;
+            flex-shrink:0;
         }
 
         .primo-button:hover {
@@ -64,7 +65,7 @@
             value="UW_EVERYTHING" /><input name="lang" type="hidden" value="en" /> <input id="primoQuery"
             name="query" type="hidden" /> <input class="search-query" id="primoQueryTemp" name="queryTemp"
             style="width: 20%;" type="text" /> <br /><br />
-        <div layout="row" style="display: flex; flex-direction: row; min-height: min-content; flex-shrink: 0; text-size-adjust: 100%;">
+        <div layout="row" style="display: flex; min-height: min-content; text-size-adjust: 100%; flex-flow: row nowrap;">
             <button class="primo-button" id="go"
                 title="Search Everything" type="submit" value="Search"><img
                     src="https://www.lib.washington.edu/images2/graphics/primo/everything.png"
