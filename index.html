@@ -7,6 +7,15 @@
     </script>
     <script src="./primo-nui-search.js"></script>
     <style>
+        div#resourcetypeboxflow {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        div#resourcetypeflow {
+            flex-shrink: 0;
+        }
+
         body {
             background-color: #5b3e91;
         }
@@ -20,12 +29,10 @@
             background-color: white;
             border-radius: 16px;
             display: block;
-            /* height: 35px;
-            line-height: 35px; */
             height: 28px;
             line-height: 28px;
-            margin: auto 3px;
             margin-right: 3px;
+            margin-bottom: 10px;
             float: left;
             box-sizing: border-box;
             position: relative;
@@ -69,7 +76,7 @@
         <br /><br />
         <div id="resourcetypeboxflow">
             <div id="resourcetypeflow">
-                <button class="primo-button" id="go" title="Search Everything" type="submit" value="Search" onfocus>
+                <button class="primo-button" id="go" title="Search Everything" type="submit" value="Search">
                     <img src="https://www.lib.washington.edu/images2/graphics/primo/everything.png"
                         style="height: 100%" />All
                 </button>
