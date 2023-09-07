@@ -37,7 +37,7 @@ function searchSimplePrimo2() {
 
 jq(function () {
   jq("#searchFormPrimoNUI2").submit(function () {
-    searchSimplePrimo();
+    searchSimplePrimo2();
   });
   // onsubmit
 });
