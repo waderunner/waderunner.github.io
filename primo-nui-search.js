@@ -21,7 +21,7 @@ jq(function () {
 });
 
 function searchSimplePrimo2() {
-  var form = document.forms["searchFormPrimoNUI"];
+  var form = document.forms["searchFormPrimoNUI2"];
   /* in case the event was triggered on an internal input */
   while (form.nodeName !== "FORM") form = form.parentElement;
 
