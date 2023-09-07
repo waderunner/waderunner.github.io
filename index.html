@@ -1,158 +1,464 @@
 <html>
-
-<head>
+  <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
-        var jq = jQuery.noConflict();
+      var jq = jQuery.noConflict();
     </script>
     <script src="./primo-nui-search.js"></script>
     <style>
-        div#resourcetypeboxflow {
-            display: flex;
-            overflow-x: auto;
-        }
+      div#resourcetypeboxflow {
+        display: flex;
+        overflow-x: auto;
+      }
 
-        div#resourcetypeflow {
-            flex-shrink: 0;
-        }
+      div#resourcetypeflow {
+        flex-shrink: 0;
+      }
 
-        body {
-            background-color: #5b3e91;
-        }
+      div#resourcetypeboxflow2 {
+        display: flex;
+        overflow-x: auto;
+      }
 
-        .primo-button {
-            text-transform: none;
-            cursor: default;
-            border: none;
-            color: black;
-            background-color: white;
-            border-radius: 16px;
-            display: block;
-            height: 28px;
-            line-height: 28px;
-            margin-right: 3px;
-            margin-bottom: 10px;
-            float: left;
-            box-sizing: border-box;
-            position: relative;
-            min-width: 1%;
-            min-height: 1%;
-            font-size: 15px;
-            font-weight: 500;
-            align-items: center;
-            text-size-adjust: 100%;
-            flex-shrink: 0;
-        }
+      div#resourcetypeflow2 {
+        flex-shrink: 0;
+      }
 
-        .primo-button:hover {
-            background-color: #d7a900;
-        }
+      body {
+        background-color: #5b3e91;
+      }
 
-        .primo-button:focus {
-            background-color: #d7a900;
-        }
+      .primo-button {
+        text-transform: none;
+        cursor: default;
+        border: none;
+        color: black;
+        background-color: white;
+        border-radius: 16px;
+        display: block;
+        height: 28px;
+        line-height: 28px;
+        margin-right: 3px;
+        margin-bottom: 10px;
+        float: left;
+        box-sizing: border-box;
+        position: relative;
+        min-width: 1%;
+        min-height: 1%;
+        font-size: 15px;
+        font-weight: 500;
+        align-items: center;
+        text-size-adjust: 100%;
+        flex-shrink: 0;
+      }
 
-        .search-label {
-            color: white;
-            font-weight: bold;
-            font-size: 1.5em;
-            font-family: "Open Sans", verdana, sans-serif;
-        }
+      .primo-button:hover {
+        background-color: #d7a900;
+      }
+
+      .primo-button:focus {
+        background-color: #d7a900;
+      }
+
+      .search-label {
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+        font-family: "Open Sans", verdana, sans-serif;
+      }
     </style>
-</head>
-<div id="primosearch" style="border: 0 !important">
+  </head>
+  <div id="primosearch" style="border: 0 !important">
     <img class="image-left" src="resolveuid/e9135be6897747168eccc28a43559ce0" />
-    <script src="https://www.lib.washington.edu/portal_javascripts/Old%20Plone%203%20Custom%20Theme/primo-nui-search.js"
-        type="text/javascript"></script>
-    <form action="https://orbiscascade-washington.primo.exlibrisgroup.com/discovery/search"
-        enctype="application/x-www-form-urlencoded; charset=utf-8" id="searchFormPrimoNUI" method="get"
-        name="searchSimpleForm" target="_self">
-        <input name="vid" type="hidden" value="01ALLIANCE_UW:mayrelease" />
-        <input name="tab" type="hidden" value="UW_default" />
-        <input name="search_scope" type="hidden" value="UW_EVERYTHING" /><input name="lang" type="hidden" value="en" />
-        <input id="primoQuery" name="query" type="hidden" />
-        <input class="search-query" id="primoQueryTemp" name="queryTemp" type="text" required />
-        <br /><br />
-        <div id="resourcetypeboxflow">
-            <div id="resourcetypeflow">
-                <button class="primo-button" id="go" title="Search Everything" type="submit" value="Search">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/everything.png"
-                        style="height: 100%" />All
-                </button>
-                <button class="primo-button" name="pfilter" title="Search Print Books" type="submit"
-                    value="rtype,exact,pbooks">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_pbooks.png"
-                        style="height: 100%" />
-                    Books
-                </button>
-                <button class="primo-button" name="pfilter" title="Search eBooks" type="submit"
-                    value="rtype,exact,books">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_ebook.png"
-                        style="height: 100%" />
-                    eBooks
-                </button>
-                <button class="primo-button" name="pfilter" title="Search Articles" type="submit"
-                    value="rtype,exact,articles">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_article.png"
-                        style="height: 100%" />
-                    Articles
-                </button>
-                <button class="primo-button" name="pfilter" title="Search Journals" type="submit"
-                    value="rtype,exact,journals">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_journal.png"
-                        style="height: 100%" />
-                    Journals
-                </button>
-                <button class="primo-button" name="pfilter" title="Search Images" type="submit"
-                    value="rtype,exact,images">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_image.png"
-                        style="height: 100%" />
-                    Images
-                </button>
-                <button class="primo-button" name="pfilter" title="Search Streaming Videos" type="submit"
-                    value="rtype,exact,videos">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_video.png"
-                        style="height: 100%" />
-                    Streaming Videos
-                </button>
+    <script
+      src="https://www.lib.washington.edu/portal_javascripts/Old%20Plone%203%20Custom%20Theme/primo-nui-search.js"
+      type="text/javascript"
+    ></script>
+    <form
+      action="https://orbiscascade-washington.primo.exlibrisgroup.com/discovery/search"
+      enctype="application/x-www-form-urlencoded; charset=utf-8"
+      id="searchFormPrimoNUI"
+      method="get"
+      name="searchSimpleForm"
+      target="_self"
+    >
+      <input name="vid" type="hidden" value="01ALLIANCE_UW:mayrelease" />
+      <input name="tab" type="hidden" value="UW_default" />
+      <input name="search_scope" type="hidden" value="UW_EVERYTHING" /><input
+        name="lang"
+        type="hidden"
+        value="en"
+      />
+      <input id="primoQuery" name="query" type="hidden" />
+      <input
+        class="search-query"
+        id="primoQueryTemp"
+        name="queryTemp"
+        type="text"
+        required
+      />
+      <br /><br />
+      <div id="resourcetypeboxflow">
+        <div id="resourcetypeflow">
+          <button
+            class="primo-button"
+            id="go"
+            title="Search Everything"
+            type="submit"
+            value="Search"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/everything.png"
+              style="height: 100%"
+            />All
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Print Books"
+            type="submit"
+            value="rtype,exact,pbooks"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_pbooks.png"
+              style="height: 100%"
+            />
+            Books
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search eBooks"
+            type="submit"
+            value="rtype,exact,books"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_ebook.png"
+              style="height: 100%"
+            />
+            eBooks
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Articles"
+            type="submit"
+            value="rtype,exact,articles"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_article.png"
+              style="height: 100%"
+            />
+            Articles
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Journals"
+            type="submit"
+            value="rtype,exact,journals"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_journal.png"
+              style="height: 100%"
+            />
+            Journals
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Images"
+            type="submit"
+            value="rtype,exact,images"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_image.png"
+              style="height: 100%"
+            />
+            Images
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Streaming Videos"
+            type="submit"
+            value="rtype,exact,videos"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_video.png"
+              style="height: 100%"
+            />
+            Streaming Videos
+          </button>
 
-                <button class="primo-button" name="pfilter" title="Search Streaming Audios" type="submit"
-                    value="rtype,exact,audios">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_audio.png"
-                        style="height: 100%" />
-                    Streaming Audios
-                </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Streaming Audios"
+            type="submit"
+            value="rtype,exact,audios"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_audio.png"
+              style="height: 100%"
+            />
+            Streaming Audios
+          </button>
 
-                <button class="primo-button" name="pfilter" title="Search Dissertations & Theses" type="submit"
-                    value="rtype,exact,dissertations">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_dissertation.png"
-                        style="height: 100%" />
-                    Dissertations & Theses
-                </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Dissertations & Theses"
+            type="submit"
+            value="rtype,exact,dissertations"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_dissertation.png"
+              style="height: 100%"
+            />
+            Dissertations & Theses
+          </button>
 
-                <button class="primo-button" name="pfilter" title="Search Scores" type="submit"
-                    value="rtype,exact,scores">
-                    <img src="https://www.lib.washington.edu/images2/graphics/primo/icon_score.png"
-                        style="height: 100%" />
-                    Scores
-                </button>
-            </div>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Scores"
+            type="submit"
+            value="rtype,exact,scores"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_score.png"
+              style="height: 100%"
+            />
+            Scores
+          </button>
         </div>
-        <br />
-        <div class="homesrchadvan">
-            <p>
-                <a class="external-link" href="http://search.lib.uw.edu/advanced">Advanced Search</a>
-            </p>
-            <p>
-                <a class="external-link" href="http://guides.lib.uw.edu/research/uwlibrariessearch">FAQ</a>
-                <a class="internal-link"
-                    href="https://www.lib.washington.edu/help/connect/known-issues#uwlibsearch">Known Issues</a>
-                |
-                <a class="internal-link" href="https://lib.uw.edu/about/contact/email"><i>Questions/Comments on UW
-                        Libraries Search</i></a>
-            </p>
-        </div>
+      </div>
+      <br />
+      <div class="homesrchadvan">
+        <p>
+          <a class="external-link" href="http://search.lib.uw.edu/advanced"
+            >Advanced Search</a
+          >
+        </p>
+        <p>
+          <a
+            class="external-link"
+            href="http://guides.lib.uw.edu/research/uwlibrariessearch"
+            >FAQ</a
+          >
+          <a
+            class="internal-link"
+            href="https://www.lib.washington.edu/help/connect/known-issues#uwlibsearch"
+            >Known Issues</a
+          >
+          |
+          <a class="internal-link" href="https://lib.uw.edu/about/contact/email"
+            ><i>Questions/Comments on UW Libraries Search</i></a
+          >
+        </p>
+      </div>
     </form>
-</div>
+  </div>
 
+  <div id="primosearch2" style="border: 0 !important">
+    <img class="image-left" src="resolveuid/e9135be6897747168eccc28a43559ce0" />
+    <script
+      src="https://www.lib.washington.edu/portal_javascripts/Old%20Plone%203%20Custom%20Theme/primo-nui-search.js"
+      type="text/javascript"
+    ></script>
+    <form
+      action="https://orbiscascade-washington.primo.exlibrisgroup.com/discovery/search"
+      enctype="application/x-www-form-urlencoded; charset=utf-8"
+      id="searchFormPrimoNUI"
+      method="get"
+      name="searchSimpleForm"
+      target="_self"
+    >
+      <input name="vid" type="hidden" value="01ALLIANCE_UW:mayrelease" />
+      <input name="tab" type="hidden" value="UW_default" />
+      <input name="search_scope" type="hidden" value="UW_EVERYTHING" /><input
+        name="lang"
+        type="hidden"
+        value="en"
+      />
+      <input id="primoQuery" name="query" type="hidden" />
+      <input
+        class="search-query"
+        id="primoQueryTemp"
+        name="queryTemp"
+        type="text"
+        required
+      />
+      <select id="pfilter" name="pfilter">
+        <option value="rtype,exact,any">Everything</option>
+        <option value="rtype,exact,pbooks">Print Books</option>
+        <option value="rtype,exact,books">eBooks</option>
+        <option value="rtype,exact,articles">Articles</option>
+        <option value="rtype,exact,journals">Journals</option>
+      </select>
+
+      <br /><br />
+         <!--<div id="resourcetypeboxflow2">
+        <div id="resourcetypeflow2">
+       <button
+            class="primo-button"
+            id="go"
+            title="Search Everything"
+            type="submit"
+            value="Search"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/everything.png"
+              style="height: 100%"
+            />All
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Print Books"
+            type="submit"
+            value="rtype,exact,pbooks"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_pbooks.png"
+              style="height: 100%"
+            />
+            Books
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search eBooks"
+            type="submit"
+            value="rtype,exact,books"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_ebook.png"
+              style="height: 100%"
+            />
+            eBooks
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Articles"
+            type="submit"
+            value="rtype,exact,articles"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_article.png"
+              style="height: 100%"
+            />
+            Articles
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Journals"
+            type="submit"
+            value="rtype,exact,journals"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_journal.png"
+              style="height: 100%"
+            />
+            Journals
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Images"
+            type="submit"
+            value="rtype,exact,images"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_image.png"
+              style="height: 100%"
+            />
+            Images
+          </button>
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Streaming Videos"
+            type="submit"
+            value="rtype,exact,videos"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_video.png"
+              style="height: 100%"
+            />
+            Streaming Videos
+          </button>
+
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Streaming Audios"
+            type="submit"
+            value="rtype,exact,audios"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_audio.png"
+              style="height: 100%"
+            />
+            Streaming Audios
+          </button>
+
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Dissertations & Theses"
+            type="submit"
+            value="rtype,exact,dissertations"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_dissertation.png"
+              style="height: 100%"
+            />
+            Dissertations & Theses
+          </button>
+
+          <button
+            class="primo-button"
+            name="pfilter"
+            title="Search Scores"
+            type="submit"
+            value="rtype,exact,scores"
+          >
+            <img
+              src="https://www.lib.washington.edu/images2/graphics/primo/icon_score.png"
+              style="height: 100%"
+            />
+            Scores
+          </button>
+        </div>
+      </div>  -->
+      <br />
+      <div class="homesrchadvan">
+        <p>
+          <a class="external-link" href="http://search.lib.uw.edu/advanced"
+            >Advanced Search</a
+          >
+        </p>
+        <p>
+          <a
+            class="external-link"
+            href="http://guides.lib.uw.edu/research/uwlibrariessearch"
+            >FAQ</a
+          >
+          <a
+            class="internal-link"
+            href="https://www.lib.washington.edu/help/connect/known-issues#uwlibsearch"
+            >Known Issues</a
+          >
+          |
+          <a class="internal-link" href="https://lib.uw.edu/about/contact/email"
+            ><i>Questions/Comments on UW Libraries Search</i></a
+          >
+        </p>
+      </div>
+    </form>
+  </div>
 </html>
