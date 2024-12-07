@@ -39,8 +39,7 @@ function fhlData() {
                     });
                 });
             $('#fhlresearch tfoot tr').appendTo('#fhlresearch thead');
-        },
-        keys: true
+        }
     });
 
 }
