@@ -1,7 +1,6 @@
 function fhlData() {
 
     new DataTable('#fhlresearch', {
-        keys: true,
         ajax: '/FHL/data/fhl-data-array.json',
         order: [[0, 'asc']],
         columnDefs: [{ type: 'integer', targets: 0 }],
@@ -40,7 +39,8 @@ function fhlData() {
                     });
                 });
             $('#fhlresearch tfoot tr').appendTo('#fhlresearch thead');
-        }
+        },
+        keys: true
     });
 
 }
