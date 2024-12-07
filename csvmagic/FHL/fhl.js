@@ -1,7 +1,8 @@
 function fhlData() {
 
     new DataTable('#fhlresearch', {
-        ajax: 'https://waderunner.github.io/csvmagic/FHL/data/fhl-data-array.json',
+        keys: true,
+        ajax: '/FHL/data/fhl-data-array.json',
         order: [[0, 'asc']],
         columnDefs: [{ type: 'integer', targets: 0 }],
         columns: [
