@@ -3,7 +3,7 @@ function fhlData() {
     new DataTable('#fhlresearch', {
         keys: true,
         ajax: '/csvmagic/FHL/data/fhl-data-array.json',
-        order: [[4, 'asc']],
+        order: [[5, 'asc']],
         columnDefs: [{ type: 'integer', targets: 0 }],
         columnDefs: [{ visible: false, targets: 0 }],
         columns: [
