@@ -3,9 +3,7 @@ function fhlData() {
     new DataTable('#fhlresearch', {
         layout: {
             topStart: {
-                buttons: [
-                    'copy', 'excel', 'pdf'
-                ]
+                buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
             }
         },
         keys: true,
