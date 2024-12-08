@@ -1,11 +1,6 @@
 function fhlData() {
 
     new DataTable('#fhlresearch', {
-        layout: {
-            topStart: {
-                buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
-            }
-        },
         keys: true,
         ajax: '/csvmagic/FHL/data/fhl-data-array.json',
         order: [[5, 'asc']],
@@ -23,6 +18,11 @@ function fhlData() {
             { data: 'Descriptors' },
             { data: 'Location' }
         ],
+        layout: {
+            topStart: {
+                buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+            }
+        },
         initComplete: function () {
             // Code to execute after the table is fully initialized
             console.log("DataTables has been initialized!");
