@@ -20,7 +20,7 @@ function fhlData() {
         ],
         layout: {
             topStart: {
-                buttons: ['print']
+                buttons: ['copy', 'excel', 'pdf', 'csv']
             }
         },
         initComplete: function () {
