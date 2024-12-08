@@ -1,6 +1,13 @@
 function fhlData() {
 
     new DataTable('#fhlresearch', {
+        layout: {
+            topStart: {
+                buttons: [
+                    'copy', 'excel', 'pdf'
+                ]
+            }
+        },
         keys: true,
         ajax: '/csvmagic/FHL/data/fhl-data-array.json',
         order: [[5, 'asc']],
