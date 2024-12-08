@@ -45,7 +45,7 @@ function fhlData() {
                         }
                     });
                 });
-            /* $('#fhlresearch tfoot tr').appendTo('#fhlresearch thead'); */
+            $('#fhlresearch tfoot tr').appendTo('#fhlresearch thead');
         }
     });
 
