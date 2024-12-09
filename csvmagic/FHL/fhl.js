@@ -3,9 +3,6 @@ function fhlData() {
     new DataTable('#fhlresearch', {
         keys: true,
         fixedHeader: true,
-        scrollY: '80%',
-        deferRender: true,
-        scroller: true,
         ajax: '/csvmagic/FHL/data/fhl-data-array.json',
         order: [[1, 'asc']],
         columnDefs: [{ type: 'integer', targets: 0 }],
