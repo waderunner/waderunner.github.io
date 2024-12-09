@@ -22,8 +22,8 @@ function fhlData() {
         /* layout: {
             topStart: {
                 buttons: ['copy', 'excel', 'pdf', 'csv']
-            } */
-    },
+            }
+        }, */
         initComplete: function () {
             // Code to execute after the table is fully initialized
             console.log("DataTables has been initialized!");
