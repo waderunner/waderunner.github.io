@@ -3,7 +3,7 @@ function fhlData() {
     new DataTable('#fhlresearch', {
         keys: true,
         fixedHeader: true,
-        scrollY: 200,
+        scrollY: '80%',
         deferRender: true,
         scroller: true,
         ajax: '/csvmagic/FHL/data/fhl-data-array.json',
