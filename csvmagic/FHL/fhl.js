@@ -2,6 +2,7 @@ function fhlData() {
 
     new DataTable('#fhlresearch', {
         keys: true,
+        fixedHeader: true,
         ajax: '/csvmagic/FHL/data/fhl-data-array.json',
         order: [[1, 'asc']],
         columnDefs: [{ type: 'integer', targets: 0 }],
