@@ -4,7 +4,7 @@ function fhlData() {
         keys: true,
         fixedHeader: true,
         ajax: '/csvmagic/FHL/data/fhl-data-array.json',
-        scrollY: 200,
+        scrollY: '70%',
         deferRender: true,
         scroller: true,
         order: [[1, 'asc']],
