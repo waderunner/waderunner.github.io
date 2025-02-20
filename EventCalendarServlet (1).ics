@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//ON24 Corporation//ON24 Corporation//EN
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20250312T150000Z
+DTEND:20250312T160000Z
+LOCATION:Event
+TRANSP:OPAQUE
+UID:157767868520250219T222800Z
+DTSTAMP:20250219T222838Z
+SUMMARY:Enhancing Library Management with AI-powered Metadata Solutions
+DESCRIPTION:Thank you for registering for Enhancing Library Management with AI-powered Metadata Solutions. \n\nLIVE EVENT DATE:  March 12, 2025 \nLIVE EVENT TIME:  11:00 AM EDT \n\n  \n\nUse the link below to enter the event up to 15 minutes before the start. \n\nEVENT LINK:  https://event.on24.com/wcc/r/4859391/C622105C2BB6D531E4D61355E6821727 \nEMAIL:  wadeguid@uw.edu \n\nThank you and enjoy the event!
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+title:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
+
